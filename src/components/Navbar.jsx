@@ -5,14 +5,13 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
-
     const handleNav = () =>{
         setNav(!nav)
     }
   return (
     <div className='rounded-div flex items-center justify-between h-20 font-bold '>
       <Link to="/">
-        <h1 className='text-2xl '>CryptoBase</h1>
+        <h1 className='text-2xl '>CryptoBazar</h1>
       </Link>
       <div className='hidden md:block '>
         <ThemeToggle/>
@@ -34,7 +33,7 @@ const Navbar = () => {
             <li className='border-b py-4 cursor-pointer'>
                 <Link to='/'>Account</Link>
             </li>
-            <li className=' py-4 cursor-pointer'>
+            <li className='py-4 cursor-pointer'>
            <ThemeToggle/>
             </li>
         </ul>
