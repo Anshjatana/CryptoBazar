@@ -30,6 +30,9 @@ useEffect(()=>{
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account" element={<Account />} />
         <Route path="/coinpage" element={<CoinPage />} />
+        <Route path='/coin/:coinId' element={<CoinPage/>}>
+          <Route path=':coinId' />
+        </Route>
       </Routes>
     </ThemeProvider>
   )

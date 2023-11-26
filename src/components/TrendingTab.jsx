@@ -13,18 +13,18 @@ const TrendingTab = () => {
         
     },[url])
   return (
-    <div className='rounded-div  my-12 py-8 text-primary'>
-     <h1 className=' text-2xl font-bold py-4 text-center'>
+    <div className='rounded-div  my-12 py-6 text-primary'>
+     <h1 className=' text-2xl font-bold py-2 text-center'>
         Trending coins
      </h1>
      <div className='flex md:flex-wrap md:flex-row flex-col  items-center justify-between'>
 
      {
         trending.map((coin)=>(
-            <div className='shadow-xl rounded-xl md:w-[47%] lg:w-[32%] w-[90%]  p-4 hover:scale-105 ease-in-out duration-300 '>
-            <div className='flex justify-between items-center '>
-                <div className='flex '>
-                    <img src={coin.item.small} alt="/" className='rounded-3xl w-10'/>
+            <div key={coin.item.coin_id} className='shadow-xl rounded-xl md:w-[47%] lg:w-[32%] w-[90%]  p-4 hover:scale-105 ease-in-out duration-300 '>
+            <div className='flex justify-between items-center ' >
+                <div className='flex items-center' >
+                    <img src={coin.item.small} alt="/" className='rounded-3xl w-8 h-8 md:w-10 md:h-10 '/>
                     <div className='ml-4 text-sm '>
                         <p>{coin.item.name}</p>
                         <p>{coin.item.symbol.toUpperCase()}</p>
